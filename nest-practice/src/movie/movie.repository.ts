@@ -25,7 +25,7 @@ export class MovieRepository implements ImovieRepository {
     });
   };
 
-  searchMovieById = (id: string): Promise<Tmovie> => {
+  searchMovieById = (id: number): Promise<Tmovie> => {
     return new Promise((res) => {
       setTimeout(() => {
         const movie: Tmovie = DB_MOVIE[id];

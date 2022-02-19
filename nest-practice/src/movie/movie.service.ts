@@ -20,7 +20,7 @@ export class MovieService implements ImovieService {
     return searchResult;
   }
 
-  async getMovieById(id: string): Promise<Tmovie> {
+  async getMovieById(id: number): Promise<Tmovie> {
     const searchResult: Tmovie = await this.MovieRepository.searchMovieById(id);
     return searchResult;
   }

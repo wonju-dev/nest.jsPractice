@@ -23,7 +23,8 @@ export class MovieController implements ImovieController {
   }
 
   @Get(':id')
-  async searchById(@Param('id') id: string): Promise<Tmovie> {
+  async searchById(@Param('id') id: any): Promise<Tmovie> {
+    console.log(id instanceof Number);
     const movie = await this.MovieService.getMovieById(id);
     return movie;
   }
